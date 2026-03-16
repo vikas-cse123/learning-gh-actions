@@ -9,10 +9,22 @@ jobs:
             - name: List all files
               run: ls -a
             - name: Checkout repo
-              uses: actions/checkout@v6
+              run: actions/checkout@v6
             - name: List all files
               run: ls -a
             - name: Print pwd
               run: pwd
+    my-second-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print node version
+              run: node -v
+            - name: Instll nodejs version 25
+              uses: actions/setup-node@v6
+            - name: Print node versions
+              run: node -v
             
  
+            
+ 
+
