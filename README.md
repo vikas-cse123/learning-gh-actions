@@ -1,1 +1,1 @@
-# learning-gh-actions
+# learning-github-actions
