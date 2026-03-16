@@ -9,7 +9,7 @@ jobs:
             - name: List all files
               run: ls -a
             - name: Checkout repo
-              run: actions/checkout@v6
+              uses: actions/checkout@v6
             - name: List all files
               run: ls -a
             - name: Print pwd
@@ -21,10 +21,11 @@ jobs:
               run: node -v
             - name: Instll nodejs version 25
               uses: actions/setup-node@v6
+              with:
+                node-version: '25'
             - name: Print node versions
               run: node -v
             
  
             
  
-
