@@ -6,14 +6,12 @@ jobs:
     my-first-job:
         runs-on: ubuntu-latest
         steps:
-            - name: List all files
-              run: ls -a
+            - run: ls -a
             - name: Checkout repo
               uses: actions/checkout@v6
             - name: List all files
               run: ls -a
-            - name: Print pwd
-              run: pwd
+            - run: pwd
     my-second-job:
         runs-on: ubuntu-latest
         steps:
