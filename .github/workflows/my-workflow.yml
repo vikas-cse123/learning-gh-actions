@@ -4,11 +4,17 @@ on: [push,workflow_dispatch]
 
 jobs:
     my-first-job:
-        runs-on: ubuntu-latest
-        steps:
+      env:
+         PASS: "vikas"
+         TEST: "hello"
+
+      runs-on: ubuntu-latest
+      steps:
             - run: echo "${{toJson(env)}}"
             - run: echo "${{toJson(vars)}}"
             - run: echo "${{toJson(secrets)}}"
             - run: echo "${{toJson(runner)}}"
+            - run: echo "${{toJson(env.PASS)}}"
+
 
  
