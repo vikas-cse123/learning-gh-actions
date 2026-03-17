@@ -6,24 +6,5 @@ jobs:
     my-first-job:
         runs-on: ubuntu-latest
         steps:
-            - run: ls -a
-            - name: Checkout repo
-              uses: actions/checkout@v6
-            - name: List all files
-              run: ls -a
-            - run: pwd
-    my-second-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print node version
-              run: node -v
-            - name: Instll nodejs version 25
-              uses: actions/setup-node@v6
-              with:
-                node-version: '25'
-            - name: Print node versions
-              run: node -v
-            
- 
-            
+            - run: echo ${{true}}
  
